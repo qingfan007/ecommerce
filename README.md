@@ -15,26 +15,26 @@ Includes JWT-based authentication, Swagger UI, and Docker support.
 ## 🚀 How to Run
 
 ```bash
-git clone https://github.com/qingfan007/ecommerce.git
+git clone git@github.com:qingfan007/ecommerce.git
 cd ecommerce
 docker-compose up -d
 
 
-# 启动服务
+# start
 docker-compose up -d
 
-# 检查状态
+# check status
 docker-compose ps
 
-# 查看日志
+# cat logs
 docker-compose logs -f web
 
-# 测试接口
+# test
 curl http://localhost:8080
 
-# 停止服务
+# stop
 docker-compose down
 
-# 重新构建镜像并启动
+# rebulid image and start
 docker-compose up -d --build
 # --build 强制重新构建镜像
