@@ -1,4 +1,4 @@
-package com.simple.ecommerce.controller;
+package com.simple.ecommerce.mysql.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

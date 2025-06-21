@@ -12,6 +12,15 @@ Includes JWT-based authentication, Swagger UI, and Docker support.
 - Swagger/OpenAPI
 - Docker & Docker Compose
 
+## ✅ Features
+
+- RESTful API (Spring Boot)
+- MySQL Module: User / Product / Order
+- PostgreSQL Module: PgReview demo (separate datasource)
+- Dockerized: `docker-compose` for MySQL & PostgreSQL
+- Clean project structure (multi-package separation)
+- Postman collection provided
+
 ## 🚀 How to Run
 
 ```bash
@@ -37,4 +46,4 @@ docker-compose down
 
 # rebulid image and start
 docker-compose up -d --build
-# --build 强制重新构建镜像
+

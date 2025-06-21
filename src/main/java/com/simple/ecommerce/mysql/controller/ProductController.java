@@ -1,8 +1,8 @@
-package com.simple.ecommerce.controller;
+package com.simple.ecommerce.mysql.controller;
 
-import com.simple.ecommerce.entity.Product;
+import com.simple.ecommerce.mysql.entity.Product;
 import com.simple.ecommerce.exception.ResourceNotFoundException;
-import com.simple.ecommerce.repository.ProductRepository;
+import com.simple.ecommerce.mysql.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

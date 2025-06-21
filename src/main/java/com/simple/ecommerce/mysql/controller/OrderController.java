@@ -1,7 +1,7 @@
-package com.simple.ecommerce.controller;
+package com.simple.ecommerce.mysql.controller;
 
-import com.simple.ecommerce.entity.Order;
-import com.simple.ecommerce.repository.OrderRepository;
+import com.simple.ecommerce.mysql.entity.Order;
+import com.simple.ecommerce.mysql.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,24 +1,26 @@
-package com.simple.ecommerce.entity;
+package com.simple.ecommerce.mysql.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-
+@Table(name = "orders")
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
-    private String username;
+    private Long userId;
+    private Long productId;
+    private int quantity;
+    private double totalPrice;
 
-    private String password;
-
+    private Date orderDate = new Date();
 }

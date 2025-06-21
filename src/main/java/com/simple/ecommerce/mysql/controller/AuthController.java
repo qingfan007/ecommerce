@@ -1,9 +1,9 @@
-package com.simple.ecommerce.controller;
+package com.simple.ecommerce.mysql.controller;
 
-import com.simple.ecommerce.dto.AuthRequest;
-import com.simple.ecommerce.dto.AuthResponse;
-import com.simple.ecommerce.entity.User;
-import com.simple.ecommerce.repository.UserRepository;
+import com.simple.ecommerce.mysql.dto.AuthRequest;
+import com.simple.ecommerce.mysql.dto.AuthResponse;
+import com.simple.ecommerce.mysql.entity.User;
+import com.simple.ecommerce.mysql.repository.UserRepository;
 import com.simple.ecommerce.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

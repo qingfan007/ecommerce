@@ -1,6 +1,6 @@
 package com.simple.ecommerce.security;
 
-import com.simple.ecommerce.repository.UserRepository;
+import com.simple.ecommerce.mysql.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
