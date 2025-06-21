@@ -1,4 +1,4 @@
-package com.simple.ecommerce.dto;
+package com.simple.ecommerce.mysql.dto;
 
 import lombok.Data;
 

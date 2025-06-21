@@ -1,6 +1,6 @@
-package com.simple.ecommerce.repository;
+package com.simple.ecommerce.mysql.repository;
 
-import com.simple.ecommerce.entity.User;
+import com.simple.ecommerce.mysql.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
