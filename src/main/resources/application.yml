@@ -38,6 +38,6 @@ jwt:
 
 coupon:
   thrift:
-#    host: coupon-thrift-service
-    host: localhost
+    host: coupon-thrift-service # if start in docker
+#    host: localhost # if start in localhost
     port: 9090
