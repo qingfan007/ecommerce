@@ -23,6 +23,12 @@ public class SecurityConfig {
         http.csrf().disable()
                 .authorizeHttpRequests()
                 .requestMatchers(
+                        "/swagger-ui.html",
+                        "/swagger-ui/**",
+                        "/v3/api-docs/**",
+                        "/v2/api-docs/**",
+                        "/webjars/**",
+                        "/swagger-resources/**",
                         "/",
                         "/index",
                         "/static/**",
