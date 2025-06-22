@@ -138,6 +138,76 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "Validate Coupon",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/coupon/validate?code=DISCOUNT10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupon",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "DISCOUNT10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get discount",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/coupon/discount?code=DISCOUNT10&amount=200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"coupon",
+						"discount"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "DISCOUNT10"
+						},
+						{
+							"key": "amount",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [

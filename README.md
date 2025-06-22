@@ -17,12 +17,16 @@ Includes JWT-based authentication, Swagger UI, and Docker support.
 - RESTful API (Spring Boot)
 - MySQL Module: User / Product / Order
 - PostgreSQL Module: PgReview demo (separate datasource)
-- Dockerized: `docker-compose` for MySQL & PostgreSQL
+- Thrift Module: CouponService (via RPC, independent Docker service)
+- JWT Authentication (Spring Security)
+- Swagger/OpenAPI Docs
+- Dockerized: docker-compose for MySQL & PostgreSQL
 - Clean project structure (multi-package separation)
 - Postman collection provided
 
 ## 🚀 How to Run
-
+**Note:** The `docker-compose.yml` file has been removed from this project.
+### The following operation can be ignored .
 ```bash
 git clone git@github.com:qingfan007/ecommerce.git
 cd ecommerce

@@ -35,3 +35,9 @@ pg:
 jwt:
    secret: hLbSbsS4SRFobzmfyst4FOQLP9NhRfA7Si+wkHCHS9u3ecgG+nEHjQGtqRU7eBkyO2se0RUIgxwEjtaXB40F0g==
    expiration: 86400000
+
+coupon:
+  thrift:
+#    host: coupon-thrift-service
+    host: localhost
+    port: 9090
