@@ -4,6 +4,9 @@ import com.simple.ecommerce.mysql.entity.Product;
 import com.simple.ecommerce.exception.ResourceNotFoundException;
 import com.simple.ecommerce.mysql.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,10 +19,11 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping
-    public List<Product> getAll() {
-        return productRepository.findAll();
+    public Page<Product> getAll(@RequestParam(defaultValue = "0") int page,
+                                @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return productRepository.findAll(pageable);
     }
-
     @PostMapping
     public Product create(@RequestBody Product product) {
         return productRepository.save(product);
