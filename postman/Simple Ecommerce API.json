@@ -208,6 +208,42 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get api weather",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/weather?latitude=31.2304&longitude=121.4737",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "31.2304"
+						},
+						{
+							"key": "longitude",
+							"value": "121.4737"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [
