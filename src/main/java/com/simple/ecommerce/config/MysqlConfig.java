@@ -3,6 +3,7 @@ package com.simple.ecommerce.config;
 import com.zaxxer.hikari.HikariDataSource;
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
@@ -16,6 +17,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
@@ -25,6 +28,12 @@ import javax.sql.DataSource;
         transactionManagerRef = "mysqlTransactionManager"
 )
 public class MysqlConfig {
+
+    @Value("${spring.jpa.hibernate.ddl-auto}")
+    private String auto;
+
+    @Value("${spring.jpa.database-platform}")
+    private String dialect;
 
     @Primary
     @Bean(name = "mysqlDataSource")
@@ -40,9 +49,15 @@ public class MysqlConfig {
     public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(
             EntityManagerFactoryBuilder builder,
             @Qualifier("mysqlDataSource") DataSource dataSource) {
+
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("hibernate.hbm2ddl.auto", auto);
+        properties.put("hibernate.dialect", dialect);
+
         return builder
                 .dataSource(dataSource)
                 .packages("com.simple.ecommerce.mysql.entity")
+                .properties(properties)
                 .persistenceUnit("mysql")
                 .build();
     }
