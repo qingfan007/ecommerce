@@ -1,0 +1,12 @@
+<cities>
+    <city>
+        <name>Tokyo</name>
+        <country>Japan</country>
+        <zipcode>100-0001</zipcode>
+    </city>
+    <city>
+        <name>Shanghai</name>
+        <country>China</country>
+        <zipcode>200000</zipcode>
+    </city>
+</cities>
