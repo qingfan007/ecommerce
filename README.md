@@ -24,6 +24,7 @@ Includes JWT-based authentication, Swagger UI, and Docker support.
 - Clean project structure (multi-package separation)
 - Postman collection provided
 - External API Integration: Dynamic weather query by coordinates (Open-Meteo)
+- XML Data Import
 
 ## 🚀 How to Run
 **Note:** The `docker-compose.yml` file has been removed from this project.
